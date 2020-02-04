@@ -6,6 +6,7 @@
  ********/
 #ifndef MONEY_H
 #define MONEY_H
+#include <locale>
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -17,7 +18,8 @@ class Money
 {
 private:
     double total;
-    int hundreds, tens, fives, ones, quarters, dimes, nickels, cents;
+    int hundreds, tens, fives, ones, quarters, dimes, nickels, pennies, cents;
+    float input;
 public:
     string toString();
     string toCurrency(double amount);
